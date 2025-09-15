@@ -1,0 +1,54 @@
+@use "../../main.scss" as main;
+@use '../../colors.scss';
+
+$text: map-get(colors.$default, dark);
+
+.theme-default {
+  html,
+  body,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  main,
+  nav,
+  ul,
+  ol,
+  li,
+  table,
+  thead,
+  tbody,
+  tfoot,
+  tr,
+  td,
+  th,
+  pre,
+  code,
+  blockquote,
+  figure,
+  figcaption,
+  input,
+  textarea,
+  select,
+  button {
+    background-color: map-get(colors.$default, light) !important;
+    color: $text !important;
+  }
+
+  a {
+    color: $text !important;
+  }
+
+  ::selection {
+    background-color: lighten(map-get(colors.$default, light), 10%);
+    color: $text !important;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    border-color: darken(map-get(colors.$default, light), 10%) !important;
+  }
+}
