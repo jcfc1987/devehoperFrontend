@@ -43,6 +43,35 @@ $(document).ready(async () => {
         });
     });
 
+    $(document).on('submit', '#signupForm', (e) => {
+        e.preventDefault();
+        alert('Signup form submitted');
+        if(
+            !$('#signupName').val() ||
+            !$('#signupEmail').val() ||
+            !$('#signupPassword').val()
+        ) {
+            alert('Please fill in all fields');
+            return;
+        } else {
+            $.ajax({
+                url: app.models.UserModel.api.signup.url,
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    name: $('#signupName').val(),
+                    email: $('#signupEmail').val(),
+                    password: $('#signupPassword').val()
+                }),
+            });
+        }
+        
+        //validate name
+        //validate email
+        //validate password length
+       
+    });
+
 });
 
 

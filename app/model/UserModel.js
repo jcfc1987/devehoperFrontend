@@ -1,7 +1,7 @@
 class UserModel extends Model {
   api = {
     baseUrl: "https://www.devehoper.com/api/v1/user/",
-    login: {
+    signin: {
       url: "https://www.devehoper.com/api/v1/user/login",
       success: {
         token: "string",
@@ -15,7 +15,7 @@ class UserModel extends Model {
         code: 401,
       },
     },
-    register: {
+    signup: {
       url: "https://www.devehoper.com/api/v1/user/register",
       success: {
         user: {
