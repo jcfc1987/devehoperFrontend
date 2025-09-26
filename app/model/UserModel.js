@@ -1,22 +1,24 @@
 class UserModel extends Model {
   api = {
-    baseUrl: "https://www.devehoper.com/api/v1/user/",
-    signin: {
-      url: "https://www.devehoper.com/api/v1/user/login",
-      success: {
+    baseUrl: "https://www.api.devehoper.com/v1/user/",
+    login: {
+      method: "POST",
+      url: "https://www.api.devehoper.com/v1/user/login",
+      success: (data) => ({
         token: "string",
         user: {
           name: "string",
           email: "string",
         },
-      },
+      }),
       error: {
         message: "Invalid credentials",
         code: 401,
       },
     },
-    signup: {
-      url: "https://www.devehoper.com/api/v1/user/register",
+    register: {
+      method: "POST",
+      url: "https://www.api.devehoper.com/v1/user/register",
       success: {
         user: {
           name: "string",

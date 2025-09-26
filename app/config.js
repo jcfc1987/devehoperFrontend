@@ -1,10 +1,10 @@
 // Configuration file for the application
 const config = {
-    appName: "Feigniter", // Name of the application
+    appName: "Devehoper", // Name of the application
     homeController: "HomeController", // Default controller
     defaultMethod: "index", // Default method
     defaultLanguage: "pt", // Default language
-    localStorage: "feigniter", // Local storage key
+    localStorage: "devehoper", // Local storage key
     debugMode: false, // Enable or disable debug mode
     useCache: true, // Enable or disable caching, dont change it, not full implemented for false case (V=0.1)
     useTranslation: true, // Enable or disable translation
@@ -21,7 +21,7 @@ const config = {
         ], // Template CSS files
     }, // Templates to load
     templateContentInsertIndex: 1, // Index to insert additional content views
-    basePath: "https://feigniter.devehoper.com/", // Base path for the application
+    basePath: "https://devehoper.com/", // Base path for the application
 
     //Begin Of Styling configs
     defaultTheme: "theme-default", // Default theme
